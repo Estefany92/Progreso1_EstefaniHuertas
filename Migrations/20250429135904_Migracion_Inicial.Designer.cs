@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Progreso1_EstefaniHuertas.Migrations
 {
     [DbContext(typeof(DbHuertas_Hotel))]
-    [Migration("20250429133152_Migracion_Inicial")]
+    [Migration("20250429135904_Migracion_Inicial")]
     partial class Migracion_Inicial
     {
         /// <inheritdoc />
@@ -40,6 +40,9 @@ namespace Progreso1_EstefaniHuertas.Migrations
                     b.Property<DateTime>("FechaRegistro")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("Gold")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -48,7 +51,7 @@ namespace Progreso1_EstefaniHuertas.Migrations
                     b.Property<double>("Saldo")
                         .HasColumnType("float");
 
-                    b.Property<bool>("Tipocliente")
+                    b.Property<bool>("Silver")
                         .HasColumnType("bit");
 
                     b.HasKey("ClienteId");

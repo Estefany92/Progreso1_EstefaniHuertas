@@ -14,7 +14,8 @@ namespace Progreso1_EstefaniHuertas.Models
 
         public double Saldo { get; set; } 
 
-        public bool Tipocliente { get; set; } 
+        public bool Silver { get; set; }
+        public bool Gold { get; set; }
         public DateTime FechaRegistro { get; set; }
                                                     
         public ICollection<Reserva> Reserva { get; set; } = new List<Reserva>();

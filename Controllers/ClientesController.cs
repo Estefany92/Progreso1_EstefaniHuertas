@@ -53,7 +53,7 @@ namespace Progreso1_EstefaniHuertas.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ClienteId,Nombre,Correo,Saldo,Tipocliente,FechaRegistro")] Cliente cliente)
+        public async Task<IActionResult> Create([Bind("ClienteId,Nombre,Correo,Saldo,Silver,Gold,FechaRegistro")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace Progreso1_EstefaniHuertas.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ClienteId,Nombre,Correo,Saldo,Tipocliente,FechaRegistro")] Cliente cliente)
+        public async Task<IActionResult> Edit(int id, [Bind("ClienteId,Nombre,Correo,Saldo,Silver,Gold,FechaRegistro")] Cliente cliente)
         {
             if (id != cliente.ClienteId)
             {

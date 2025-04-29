@@ -37,6 +37,9 @@ namespace Progreso1_EstefaniHuertas.Migrations
                     b.Property<DateTime>("FechaRegistro")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("Gold")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -45,7 +48,7 @@ namespace Progreso1_EstefaniHuertas.Migrations
                     b.Property<double>("Saldo")
                         .HasColumnType("float");
 
-                    b.Property<bool>("Tipocliente")
+                    b.Property<bool>("Silver")
                         .HasColumnType("bit");
 
                     b.HasKey("ClienteId");
